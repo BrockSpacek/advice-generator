@@ -1,8 +1,5 @@
-const getAdvice = async () => {
-    const response = await fetch('https://api.adviceslip.com/advice')
-    const data = await response.json();
-
-    return data
+export const getAdvice = async () => {
+    const promise = await fetch("https://api.adviceslip.com/advice")
+    const data = await promise.json;
+    return data;
 }
-
-export { getAdvice }
