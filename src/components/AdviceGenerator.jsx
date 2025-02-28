@@ -11,7 +11,8 @@ const AdviceGenerator = () => {
   const fetchNewAdvice = async () => {
     try {
       setIsLoading(true);
-      const response = await fetch('https://api.adviceslip.com/advice');
+      let rng = Math.floor( (Math.random() * 223) + 1 );
+      const response = await fetch(`https://api.adviceslip.com/advice/${rng}`);
       const data = await response.json();
       
       if (data && data.slip) {
@@ -56,7 +57,7 @@ const AdviceGenerator = () => {
         <button 
           onClick={fetchNewAdvice}
           disabled={isLoading}
-          className="absolute left-1/2 transform -translate-x-1/2 -bottom-8 w-16 h-16 rounded-full bg-[#52ffa8] flex items-center justify-center transition-all hover:shadow-[0_0_30px_rgba(82,255,168,0.7)] disabled:opacity-70"
+          className="absolute left-1/2 transform -translate-x-1/2 -bottom-8 w-16 h-16 rounded-full bg-[#52ffa8] flex items-center justify-center transition-all hover:shadow-[0px_0px_2em_0px_rgba(83,255,171)] shadow-[#53ffab] disabled:opacity-70"
         >
           <img 
             className={isLoading ? "animate-spin" : ""} 
