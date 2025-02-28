@@ -27,9 +27,10 @@ const AdviceGenerator = () => {
   };
 
   
-  useEffect(() => {
+   useEffect(() => {
     fetchNewAdvice();
   }, []);
+ 
 
   return (
     <div className="bg-[#1f2632] h-screen bg-cover bg-no-repeat bg-center flex items-center justify-center">
