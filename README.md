@@ -13,6 +13,8 @@ You can use bootstrap or tailwind
 Goal is to recreate this challenge as close to the design as possible and having it function properly.
 
 
-Peer Reviewer: 
+Peer Reviewer: Charles Orr
 
-Comments: 
+Comments: Everything looks good, all i recommend is adding this small bit of code to make it load answers faster, great job :)
+    let rng = Math.floor( (Math.random() * 223) + 1 );
+    const promise = await fetch(`https://api.adviceslip.com/advice/${rng}`);
